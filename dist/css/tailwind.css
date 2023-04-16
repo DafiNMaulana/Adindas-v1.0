@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .wrapper {
+    @apply flex w-screen;
+  }
+  .sidebar {
+    @apply w-20 drop-shadow-md bg-white fixed top-0 h-screen p-3 flex flex-col gap-4 hover:w-80 duration-300 overflow-x-hidden;
+  }
+  .sidebar-brand {
+    @apply w-full border-b-2 border-neutral pb-4 pl-1 flex items-center gap-2;
+  }
+  .sidebar-item {
+    @apply w-full flex flex-nowrap gap-2 p-4 items-center rounded-lg text-neutral hover:bg-primary hover:text-white duration-300 whitespace-nowrap;
+  }
+  .si-active {
+    @apply text-white bg-primary
+  }
+}

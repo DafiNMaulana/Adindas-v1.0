@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="adindasLight">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./dist/css/adindas.css">
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <title>Adindas | Dashboard</title>
+</head>
+<body>
+  <div class="flex">
+
+    <!-- sidebar -->
+    <div class="sidebar group z-10">
+      <a href="./index.html" class="sidebar-brand">
+        <img src="./public/img/KC.jpg" alt="Kodingkeun Community Logo's" class="rounded-full w-12">
+        <div class="flex flex-col leading-3 -translate-y-1 opacity-0 group-hover:opacity-100 duration-300">
+          <h1 class="text-black text-2xl font-bold">Kodingkeun</h1>
+          <h1 class="font-medium text-black">Community</h1>
+        </div>
+      </a>
+      <ul class="w-full text-start flex flex-col gap-3 group-hover:text-start duration-300 transition-all">
+        <li>
+          <a href="#" class="sidebar-item si-active">
+            <i class="fas fa-chart-column text-2xl duration-150"></i>
+            <span class="font-medium text-sm opacity-0 group-hover:opacity-100 inline duration-300">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-user-group text-2xl"></i>
+            <span class="font-medium text-sm opacity-0 group-hover:opacity-100 inline duration-300">Anggota Group</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-user-tie text-2xl"></i>
+            <span class="font-medium text-sm opacity-0 group-hover:opacity-100 inline duration-300">Admin</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-user-pen text-2xl"></i>
+            <span class="font-medium text-sm opacity-0 group-hover:opacity-100 inline duration-300">Admin Web</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-user-cog text-2xl"></i>
+            <span class="font-medium text-sm opacity-0 group-hover:opacity-100 inline duration-300">Super Admin</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- sidebar -->
+
+
+    <!-- Content -->
+    <div class="flex-1 relative ">
+
+      <!-- navbar -->
+      <div class="w-full h-16 bg-white drop-shadow-md sticky top-0 flex justify-between items-center pl-28 pr-12">
+
+        <!-- search bar -->
+        <form action="#" class="flex w-80 py-10 gap-1 items-center">
+          <button type="submit" class="btn btn-primary btn-circle btn-sm block">
+            <i class="fas fa-magnifying-glass text-md text-white"></i>
+          </button>
+          <input type="text" class="w-full border rounded-md outline-none h-10 p-3 border-neutral bg-neutral-100 text-sm caret-primary" placeholder="Search everything ..">
+        </form>
+        <!-- search bar -->
+
+        <!-- tool bar -->
+        <div class="flex items-center gap-4 cursor-pointer relative">
+          <div class=" active:scale-75 duration-300" id="darkmode">
+            <i class="fas fa-moon text-xl"></i>
+          </div>
+
+          <div class="indicator relative">
+            <input type="checkbox" id="notif" class="peer" hidden>
+            <span class="indicator-item w-2 h-2 bg-primary rounded-full animate-pulse"></span> 
+            <label for="notif" class="active:scale-75 duration-150 group cursor-pointer"><i class="fas fa-bell text-xl text-neutral duration-300"></i></label>
+
+            <!-- the content -->
+            <div class="w-[400px] h-[500px] bg-white drop-shadow-lg rounded-xl absolute top-7 right-0 flex flex-col invisible peer-checked:visible peer-checked:opacity-100 duration-150 opacity-0 ">
+              <div class="w-full h-auto flex justify-between px-4 py-3">
+                <span class="text-gray-400 font-medium text-md">Notification</span>
+                <a href="" class="text-primary font-bold text-md">Mark all as read</a>
+              </div>
+              <div class="flex-1 pt-2 overflow-y-scroll">
+                <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                  <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                  <div class="flex w-full h-full flex-col gap-2">
+                    <h1 class="text-primary text-lg">There is an error</h1>
+                    <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                  </div>
+                </a>
+                <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                  <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                  <div class="flex w-full h-full flex-col gap-2">
+                    <h1 class="text-primary text-lg">There is an error</h1>
+                    <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                  </div>
+                </a>
+                <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                  <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                  <div class="flex w-full h-full flex-col gap-2">
+                    <h1 class="text-primary text-lg">There is an error</h1>
+                    <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                  </div>
+                </a>
+                <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                  <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                  <div class="flex w-full h-full flex-col gap-2">
+                    <h1 class="text-primary text-lg">There is an error</h1>
+                    <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                  </div>
+                </a>
+                <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                  <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                  <div class="flex w-full h-full flex-col gap-2">
+                    <h1 class="text-primary text-lg">There is an error</h1>
+                    <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                  </div>
+                </a>
+                <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                  <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                  <div class="flex w-full h-full flex-col gap-2">
+                    <h1 class="text-primary text-lg">There is an error</h1>
+                    <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                  </div>
+                </a>
+                <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                  <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                  <div class="flex w-full h-full flex-col gap-2">
+                    <h1 class="text-primary text-lg">There is an error</h1>
+                    <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                  </div>
+                </a>
+              </div>
+              <div class="w-full h-auto text-center bg-white py-4 rounded-lg">
+                <a href="#">
+                  View all
+                  <i class="fas fa-magnifying-glass text-primary text-md"></i>
+                </a>
+              </div>
+            </div>
+            <!-- the content -->
+          </div>
+          
+          <label tabindex="0"  class="avatar items-center gap-1 dropdown flex dropdown-bottom dropdown-end">
+            <div class="w-10 rounded-full active:scale-75 duration-300">
+              <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+            </div>
+            <span class="text-sm font-medium text-[#474747]">Hi, Zulhan maulana</span>
+              <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-white rounded-box w-52 mt-2">
+                <li><a> <i class="fas fa-user-circle"></i> Profile</a></li>
+                <li><a> <i class="fas fa-cog"></i> Pengaturan</a></li>
+                <li><a> <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+              </ul>
+            </label>
+
+        </div>
+        <!-- tool bar END -->
+      </div>
+      <!-- navbar END -->
+
+      <!-- header -->
+      <div class="w-full bg-primary h-56  pl-28 pr-12 grid grid-cols-2 grid-rows-2">
+        <div class="text-sm breadcrumbs text-white col-span-1">
+          <ul>
+            <li><a class="text-neutral">Dashboard</a></li> 
+            <li class="font-medium">Overview</li>
+          </ul>
+        </div>
+        <h1 class="text-white font-bold text-3xl col-span-1 row-start-2">Selamat Datang !👋</h1>
+        <div class="flex gap-3 col-span-1 row-start-2 justify-end">
+          <button class="modal-btn btn bg-[#490B73] hover:bg-accent hover:border-accent border-2 border-accent btn-sm text-white normal-case text-md" data-target="modal-admin-web"> <i class="fas fa-plus mr-2 font-bold"></i> Tambah admin web</button>
+          <button class="modal-btn btn btn-accent btn-sm text-white normal-case text-md" data-target="modal-anggota"> <i class="fas fa-plus mr-2 font-bold"></i> Tambah anggota</button>
+        </div>
+      </div>
+      <!-- header END -->
+
+    </div>
+    <!-- Content END -->
+  </div>
+  <div class="fixed bg-black/50 top-0 right-0 left-0 bottom-0 duration-300 z-20 opacity-0 invisible" id="modal-admin-web">
+    <div class="modalBox p-6 h-auto bg-white drop-shadow-lg text-black rounded-lg mx-auto w-[90vw] lg:w-1/2 mt-10 duration-300 -translate-y-28">
+      <h1 class="text-md text-black font-bold">
+        Tambah admin web baru
+      </h1>
+      <p class="text-sm italic text-slate-500 font-medium">
+        Isi data yang dibutuh kan terlebih dahulu
+      </p>
+      <form action="#" class="grid grid-col-1 grid-row-5 lg:grid-col-2 lg:grid-row-3 gap-4 mt-4">
+        <div class="form-control col-span-1 row-start-1 w-full">
+          <label class="label">
+            <span class="font-medium text-slate-500">Nama Lengkap</span>
+          </label>
+          <input type="text" placeholder="Type here" class="input bg-transparent border-slate-400 rounded-md w-full" />
+        </div>
+        <div class="form-control col-span-1 row-start-2 lg:row-start-1 w-full">
+          <label class="label">
+            <span class="font-medium text-slate-500">Nomor HP</span>
+          </label>
+          <input type="text" placeholder="Type here" class="input bg-transparent border-slate-400 rounded-md w-full" />
+        </div>
+        <div class="form-control col-span-1 lg:col-span-2 row-start-3 lg:row-start-2">
+          <label class="label">
+            <span class="font-medium text-slate-500">Alamat lengkap</span>
+          </label>
+          <textarea type="text" placeholder="Type here" class="input bg-transparent border-slate-400 rounded-md w-full h-40"></textarea>
+        </div>
+        <div class="form-control col-span-1 row-start-4 lg:row-start-3 flex gap-2 flex-row">
+          <button class="btn btn-white border-slate-400 rounded-md flex-1 close-btn">cancel</button>
+          <button class="btn btn-primary rounded-md flex-1">Submit</buttn>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="fixed bg-black/50 top-0 right-0 left-0 bottom-0 duration-300 z-20 opacity-0 invisible" id="modal-anggota">
+    <div class="modalBox p-6 h-auto bg-white drop-shadow-lg text-black rounded-lg mx-auto w-[90vw] lg:w-1/2 mt-10 duration-300 -translate-y-28">
+      <h1 class="text-md text-black font-bold">
+        Tambah anggota group baru
+      </h1>
+      <p class="text-sm italic text-slate-500 font-medium">
+        Isi data yang dibutuh kan terlebih dahulu
+      </p>
+      <form action="#" class="grid grid-col-1 grid-row-5 lg:grid-col-2 lg:grid-row-3 gap-4 mt-4">
+        <div class="form-control col-span-1 row-start-1 w-full">
+          <label class="label">
+            <span class="font-medium text-slate-500">Nama Lengkap</span>
+          </label>
+          <input type="text" placeholder="Type here" class="input bg-transparent border-slate-400 rounded-md w-full" />
+        </div>
+        <div class="form-control col-span-1 row-start-2 lg:row-start-1 w-full">
+          <label class="label">
+            <span class="font-medium text-slate-500">Nomor HP</span>
+          </label>
+          <input type="text" placeholder="Type here" class="input bg-transparent border-slate-400 rounded-md w-full" />
+        </div>
+        <div class="form-control col-span-1 lg:col-span-2 row-start-3 lg:row-start-2">
+          <label class="label">
+            <span class="font-medium text-slate-500">Alamat lengkap</span>
+          </label>
+          <textarea type="text" placeholder="Type here" class="input bg-transparent border-slate-400 rounded-md w-full h-40"></textarea>
+        </div>
+        <div class="form-control col-span-1 row-start-4 lg:row-start-3 flex gap-2 flex-row">
+          <button class="btn btn-white border-slate-400 rounded-md flex-1 close-btn">cancel</button>
+          <button class="btn btn-primary rounded-md flex-1">Submit</buttn>
+        </div>
+      </form>
+    </div>
+  </div>
+<script src="./dist/js/adindas.js"></script>
+</body>
+</html>
