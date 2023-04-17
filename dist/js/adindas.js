@@ -1,6 +1,37 @@
-// const notif = document.getElementById('notif');
-// const profile = document.getElementById('profile');
 let modalBtns = document.querySelectorAll('.modal-btn');
+const myText = document.querySelectorAll('.maxWord');
+const maxWords = 3;
+const showPass = document.getElementById('show-password');
+const inputPassword = document.querySelector('input[type=password]')
+const menuBtn = document.getElementById('menu-btn');
+const sidebar = document.getElementById('sidebar');
+const menuOverlay = document.getElementById('menu-overlay');
+
+menuBtn.addEventListener('change', () => {
+  sidebar.classList.toggle('w-0');
+  sidebar.classList.toggle('w-60')
+  sidebar.classList.toggle('p-0')
+  sidebar.classList.toggle('p-3')
+  menuOverlay.classList.toggle('invisible')
+})
+
+if(inputPassword) {
+showPass.addEventListener('change', () => {
+    if(showPass.checked) {
+      inputPassword.type = 'text';
+    } else {
+      inputPassword.type = 'password';
+    }
+  })
+}
+
+// max character for address
+for(text of myText) {
+  const wordsArr = text.innerText.split(' ');
+  if (wordsArr.length > maxWords) {
+    text.innerText = wordsArr.slice(0, maxWords).join(' ') + '...';
+  }
+}
 
 for (let modalBtn of modalBtns) {
     modalBtn.onclick = () => {

@@ -1,13 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
   .wrapper {
     @apply flex w-screen;
   }
   .sidebar {
-    @apply w-20 drop-shadow-md bg-white fixed top-0 h-screen p-3 flex flex-col gap-4 hover:w-80 duration-300 overflow-x-hidden;
+    @apply drop-shadow-md bg-white fixed top-0 h-screen flex flex-col gap-4 md:hover:w-80 duration-300 overflow-x-hidden;
   }
   .sidebar-brand {
     @apply w-full border-b-2 border-neutral pb-4 pl-1 flex items-center gap-2;
@@ -18,4 +17,26 @@
   .si-active {
     @apply text-white bg-primary
   }
+  .ui-table {
+    @apply w-[800px] md:w-full rounded-xl bg-white overflow-hidden drop-shadow-2lg;
+  }
+  .ui-table table {
+    @apply w-full px-10;
+  }
+  .ui-table > table > thead {
+    @apply bg-primary-100 rounded-t-xl text-white text-lg font-medium text-start drop-shadow-2lg;
+  }
+  .ui-table > table > thead {
+   box-shadow: 5px 6px 15px rgba(0, 0, 0, 0.25);
+  }
+  .ui-table > table > tbody {
+    @apply text-lg text-base-250;
+  }
+  .ui-table > table > tbody > tr > td {
+    @apply text-lg text-base-250 font-medium;
+  }
+  .ui-table > table > tbody > tr > td:nth-chilld(2) {
+    @apply  px-10;
+  }
+  
 }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-neutral font-inter" data-theme="adindasLight">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../dist/css/adindas.css">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- icon fontawesome -->
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <title>Adindas | Login</title>
+</head>
+<body>
+  <div class="fixed top-0 left-0 bottom-0 right-0 grid place-items-center bg-primary">
+    <form action="../index.html" class="w-full h-full md:h-auto md:w-[415px] bg-white px-3 py-16 md:py-4 md:px-5 md:rounded-lg drop-shadow-lg text-black flex flex-col gap-4">
+      <div class="w-full text-center normal-case">
+        <h1 class="text-3xl text-black font-bold">Account Verification</h1>
+        <span class="text-md text-slate-400 my-3 inline-block">Please verification your account first</span>
+      </div>
+      <div class="form-control">
+        <label for="email" class="font-medium text-gray-700">
+          Email
+        </label>
+        <div class="form-control">
+            <label class="input-group">
+              <input type="text" placeholder="Type your email here" class="w-full border focus:border-slate-400 outline-none text-gray-900 focus:bg-slate-300 font-medium rounded-lg p-3 focus:outline-none flex-1" />
+              <button class="btn btn-primary"> <i class="fas fa-envelope mr-1"></i> Send code</button>
+            </label>
+          </div>
+      </div>
+      <div class="form-control">
+        <label for="password" class="font-medium text-gray-700">
+          OTP Code
+        </label>
+        <input type="password" class="w-full border focus:border-slate-400 outline-none text-gray-900 focus:bg-slate-300 font-medium rounded-lg p-3" id="password" placeholder="Type your OTP here">
+      </div>
+
+      <button type="submit" class="btn btn-primary rounded-lg">Continue</button>
+      <span class="text-center font-medium text-gray-700 text-sm">You dont have account yet? <a href="./signup.html" class="text-primary font-bold">Sign Up</a> </span>
+    </form>
+
+    <span class="absolute bottom-0 left-0 right-0 inline-block text-slate-400 text-center text-sm">Copyright &copy; 2023 Adindas</span>
+  </div>
+</body>
+</html>

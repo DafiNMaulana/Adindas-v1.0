@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-neutral font-inter" data-theme="adindasLight">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../dist/css/adindas.css">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- icon fontawesome -->
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <title>Adindas | Login</title>
+</head>
+<body>
+  <div class="fixed top-0 left-0 bottom-0 right-0 grid place-items-center bg-primary">
+    <form action="./verification.html" class="w-full h-full md:h-auto md:w-[415px] bg-white px-3 py-16 md:py-4 md:px-5 md:rounded-lg drop-shadow-lg text-black flex flex-col gap-4 mb-28 md:mb-0">
+      <div class="w-full text-center normal-case">
+        <h1 class="text-3xl text-black font-bold">Sign Up</h1>
+        <span class="text-md text-slate-400 my-3 inline-block">Welcome to family! please enter your detail</span>
+      </div>
+      <div class="form-control">
+        <label for="username" class="font-medium text-gray-700">
+          Username
+        </label>
+        <input type="text" class="w-full border focus:border-slate-400 outline-none text-gray-900 focus:bg-slate-300 font-medium rounded-lg p-3" id="username" placeholder="Username type here">
+      </div>
+      <div class="form-control">
+        <label for="password" class="font-medium text-gray-700">
+          Password
+        </label>
+        <input type="password" class="w-full border focus:border-slate-400 outline-none text-gray-900 focus:bg-slate-300 font-medium rounded-lg p-3" id="password" placeholder="Password type here">
+      </div>
+      <div class="form-control">
+        <label for="confirm password" class="font-medium text-gray-700">
+          Confirm password
+        </label>
+        <input type="password" class="w-full border focus:border-slate-400 outline-none text-gray-900 focus:bg-slate-300 font-medium rounded-lg p-3" id="confirm password" placeholder="Confrim your password here">
+      </div>
+      <div class="flex flex-col w-full border-opacity-100">
+        <button class="btn btn-primary rounded-lg">Create account</button>
+        <div class="divider before:bg-slate-300 before:h-[1px] after:bg-slate-300 after:h-[1px]">OR</div>
+        <button class="btn bg-transparent hover:bg-neutral hover:border-neutral rounded-lg text-md normal-case flex items-center justify-center gap-1">
+            <img src="../public/svg/google.svg" alt="Google" class="w-7">
+            Continue with Google
+        </button>
+      </div>
+      <span class="text-center font-medium text-gray-700 text-sm">Already have an account? <a href="./login.html" class="text-primary font-bold">Sign In</a> </span>
+    </form>
+
+    <span class="absolute bottom-0 left-0 right-0 inline-block text-slate-400 text-center text-sm">Copyright &copy; 2023 Adindas@Kodingkeun</span>
+  </div>
+</body>
+</html>
