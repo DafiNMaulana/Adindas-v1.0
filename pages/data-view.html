@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <title id="title">Admin grup</title>
+  <title id="title">Anggota grup</title>
 </head>
 <body>
   <div class="flex">
@@ -45,22 +45,18 @@
           </a>
         </li>
         <li>
-          <a href="#" class="sidebar-item">
-            <i class="fas fa-user-tie text-2xl"></i>
-            <span class="font-medium text-sm md:opacity-0 group-hover:opacity-100 inline duration-300">Admin</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="sidebar-item">
-            <i class="fas fa-user-pen text-2xl"></i>
-            <span class="font-medium text-sm md:opacity-0 group-hover:opacity-100 inline duration-300">Admin Web</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="sidebar-item">
-            <i class="fas fa-user-cog text-2xl"></i>
-            <span class="font-medium text-sm md:opacity-0 group-hover:opacity-100 inline duration-300">Super Admin</span>
-          </a>
+          <input type="checkbox" name="collapse" id="collapse" class="peer" hidden>
+          <label for="collapse" class="sidebar-item relative peer-checked:bg-primary peer-checked:drop-shadow-2lg peer-checked:text-white cursor-pointer">
+            <i class="fas fa-layer-group text-xl"></i>
+            <span class="font-medium text-sm md:opacity-0 group-hover:opacity-100 inline duration-300">Component</span>
+          </label>
+          <div class="max-h-0 w-[98%] h-0 group-hover:h-auto text-white overflow-hidden peer-checked:max-h-40 transition-all transition-padding duration-300 ease-linear rounded-b-lg">
+            <ul class="bg-primary-100 ml-2 rounded-b-lg flex flex-col w-full overflow-hidden">
+              <li> <a href="#" class="w-full inline-block hover:bg-primary-200 px-3 py-2">Modal</a></li>
+              <li> <a href="#" class="w-full inline-block hover:bg-primary-200 px-3 py-2">Alert</a></li>
+              <li> <a href="#" class="w-full inline-block hover:bg-primary-200 px-3 py-2">Toast</a></li>
+            </ul>
+          </div>
         </li>
       </ul>
     </div>
@@ -178,7 +174,7 @@
               <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-white rounded-box w-52 mt-5">
                 <li><a> <i class="fas fa-user-circle"></i> Profile</a></li>
                 <li><a> <i class="fas fa-cog"></i> Pengaturan</a></li>
-                <li><a href="./pages/login.html"> <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+                <li><a href="../pages/login.html"> <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
               </ul>
             </label>
 
@@ -205,7 +201,7 @@
 
       <!-- table anggota grup & stats web -->
       <div class="w-full md:pl-28 md:pr-7 px-3 -translate-y-20 md:-translate-y-44">
-        <div class="md:col-span-2 col-span-1 overflow-x-scroll scrollbar-thin scrollbar-thumb-base-200">
+        <div class="w-[90vw] md:w-full overflow-x-scroll scrollbar-thin scrollbar-thumb-base-200 rounded-xl">
           <div class="ui-table">
             <table>
               <thead>
@@ -225,7 +221,7 @@
                       <label for="modal-hapus" class="cursor-pointer">
                         <i class="fa-regular fa-trash-can text-error"></i>
                       </label>
-                      <a href="#">
+                      <a href="./edit-data.html">
                         <i class="fas fa-pen text-warning"></i>
                       </a>
                       <a href="#">
@@ -243,7 +239,7 @@
                       <label for="modal-hapus" class="cursor-pointer">
                         <i class="fa-regular fa-trash-can text-error"></i>
                       </label>
-                      <a href="#">
+                      <a href="./edit-data.html">
                         <i class="fas fa-pen text-warning"></i>
                       </a>
                       <a href="#">
@@ -261,7 +257,7 @@
                       <label for="modal-hapus" class="cursor-pointer">
                         <i class="fa-regular fa-trash-can text-error"></i>
                       </label>
-                      <a href="#">
+                      <a href="./edit-data.html">
                         <i class="fas fa-pen text-warning"></i>
                       </a>
                       <a href="#">
@@ -279,7 +275,7 @@
                       <label for="modal-hapus" class="cursor-pointer">
                         <i class="fa-regular fa-trash-can text-error"></i>
                       </label>
-                      <a href="#">
+                      <a href="./edit-data.html">
                         <i class="fas fa-pen text-warning"></i>
                       </a>
                       <a href="#">
@@ -297,7 +293,7 @@
                       <label for="modal-hapus" class="cursor-pointer">
                         <i class="fa-regular fa-trash-can text-error"></i>
                       </label>
-                      <a href="#">
+                      <a href="./edit-data.html">
                         <i class="fas fa-pen text-warning"></i>
                       </a>
                       <a href="#">
@@ -315,7 +311,7 @@
                       <label for="modal-hapus" class="cursor-pointer">
                         <i class="fa-regular fa-trash-can text-error"></i>
                       </label>
-                      <a href="#">
+                      <a href="./edit-data.html">
                         <i class="fas fa-pen text-warning"></i>
                       </a>
                       <a href="#">
@@ -333,7 +329,7 @@
                       <label for="modal-hapus" class="cursor-pointer">
                         <i class="fa-regular fa-trash-can text-error"></i>
                       </label>
-                      <a href="#">
+                      <a href="./edit-data.html">
                         <i class="fas fa-pen text-warning"></i>
                       </a>
                       <a href="#">
@@ -351,7 +347,7 @@
                       <label for="modal-hapus" class="cursor-pointer">
                         <i class="fa-regular fa-trash-can text-error"></i>
                       </label>
-                      <a href="#">
+                      <a href="./edit-data.html">
                         <i class="fas fa-pen text-warning"></i>
                       </a>
                       <a href="#">

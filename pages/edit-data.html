@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" class="font-inter" data-theme="adindasLight">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../dist/css/adindas.css">
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title id="title">Edit anggota grup</title>
+</head>
+<body>
+  <div class="flex">
+
+    <!-- sidebar -->
+    <div class="sidebar md:w-20 w-0 overflow-x-hidden group md:p-3 p-0 z-50" id="sidebar">
+      <a href="../index.html" class="sidebar-brand">
+        <img src="../public/img/KC.jpg" alt="Kodingkeun Community Logo's" class="rounded-full w-12">
+        <div class="flex flex-col leading-3 -translate-y-1 md:opacity-0 group-hover:opacity-100 duration-300">
+          <h1 class="text-black text-2xl font-bold">Kodingkeun</h1>
+          <h1 class="font-medium text-black">Community</h1>
+        </div>
+      </a>
+      <ul class="w-full text-start flex flex-col gap-2 group-hover:text-start duration-300 transition-all">
+        <li class=" md:hidden inline-block">
+          <form action="#" class="flex w-full gap-1 items-center">
+            <button type="submit" class="btn btn-primary block">
+              <i class="fas fa-magnifying-glass text-md text-white"></i>
+            </button>
+            <input type="text" class="w-full border rounded-md outline-none p-3 border-neutral bg-neutral-100 text-sm caret-primary" placeholder="Search everything ..">
+          </form>
+        </li>
+        <li>
+          <a href="../index.html" class="sidebar-item">
+            <i class="fas fa-chart-column text-2xl duration-150"></i>
+            <span class="font-medium text-sm md:opacity-0 group-hover:opacity-100 inline duration-300">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="sidebar-item si-active">
+            <i class="fas fa-user-group text-xl"></i>
+            <span class="font-medium text-sm md:opacity-0 group-hover:opacity-100 inline duration-300">Anggota Group</span>
+          </a>
+        </li>
+        <li>
+          <input type="checkbox" name="collapse" id="collapse" class="peer" hidden>
+          <label for="collapse" class="sidebar-item relative peer-checked:bg-primary peer-checked:drop-shadow-2lg peer-checked:text-white cursor-pointer">
+            <i class="fas fa-layer-group text-xl"></i>
+            <span class="font-medium text-sm md:opacity-0 group-hover:opacity-100 inline duration-300">Component</span>
+          </label>
+          <div class="max-h-0 w-[98%] h-0 group-hover:h-auto text-white overflow-hidden peer-checked:max-h-40 transition-all transition-padding duration-300 ease-linear rounded-b-lg">
+            <ul class="bg-primary-100 ml-2 rounded-b-lg flex flex-col w-full overflow-hidden">
+              <li> <a href="#" class="w-full inline-block hover:bg-primary-200 px-3 py-2">Modal</a></li>
+              <li> <a href="#" class="w-full inline-block hover:bg-primary-200 px-3 py-2">Alert</a></li>
+              <li> <a href="#" class="w-full inline-block hover:bg-primary-200 px-3 py-2">Toast</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- sidebar -->
+
+
+    <!-- Content -->
+    <div class="flex-1 relative ">
+
+      <!-- navbar -->
+      <div class="w-full h-16 bg-white drop-shadow-md flex justify-between items-center px-3 md:pl-28 md:pr-12 relative z-40">
+
+        <!-- search bar -->
+        <form action="#" class="hidden md:flex w-80 py-10 gap-1 items-center">
+          <button type="submit" class="btn btn-primary btn-circle btn-sm block">
+            <i class="fas fa-magnifying-glass text-md text-white"></i>
+          </button>
+          <input type="text" class="w-full border rounded-md outline-none h-10 p-3 border-neutral bg-neutral-100 text-sm caret-primary" placeholder="Search everything ..">
+        </form>
+        <!-- search bar -->
+
+        <!-- sidebar button -->
+        <label class="btn btn-circle bg-transparent hover:bg-transparent border-none swap swap-rotate md:hidden">
+          <!-- this hidden checkbox controls the state -->
+          <input type="checkbox" id="menu-btn"/>
+          <!-- hamburger icon -->
+          <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
+          <!-- close icon -->
+          <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
+        </label>
+        <!-- sidebar button END -->
+
+        <!-- tool bar -->
+        <div class="flex items-center gap-4 cursor-pointer relative">
+          <div class=" active:scale-75 duration-300" id="darkmode">
+            <i class="fas fa-moon text-xl"></i>
+          </div>
+
+          <div class="indicator relative">
+            <input type="checkbox" id="notif" class="peer" hidden>
+            <span class="indicator-item w-2 h-2 bg-primary rounded-full animate-pulse"></span> 
+            <div class="dropdown dropdown-bottom dropdown-left">
+              <label tabindex="0" class="cursor-pointer"><i class="fas fa-bell text-xl text-neutral duration-300"></i></label>
+              <ul tabindex="0" class="dropdown-content menu md:w-[400px] w-[80vw] h-[500px] bg-white drop-shadow-2lg rounded-xl relative z-[99] mt-5 translate-x-48">
+                <div class="w-full h-auto flex justify-between px-4 py-3">
+                  <span class="text-gray-400 font-medium text-md">Notification</span>
+                  <a href="" class="text-primary font-bold text-md">Mark all as read</a>
+                </div>
+                <div class="flex-1 pt-2 overflow-y-scroll scrollbar-thin scrollbar-thumb-base-200 scrollbar-thumb-rounded-lg">
+                  <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                    <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                    <div class="flex w-full h-full flex-col gap-2">
+                      <h1 class="text-primary text-lg">There is an error</h1>
+                      <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                    </div>
+                  </a>
+                  <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                    <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                    <div class="flex w-full h-full flex-col gap-2">
+                      <h1 class="text-primary text-lg">There is an error</h1>
+                      <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                    </div>
+                  </a>
+                  <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                    <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                    <div class="flex w-full h-full flex-col gap-2">
+                      <h1 class="text-primary text-lg">There is an error</h1>
+                      <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                    </div>
+                  </a>
+                  <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                    <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                    <div class="flex w-full h-full flex-col gap-2">
+                      <h1 class="text-primary text-lg">There is an error</h1>
+                      <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                    </div>
+                  </a>
+                  <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                    <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                    <div class="flex w-full h-full flex-col gap-2">
+                      <h1 class="text-primary text-lg">There is an error</h1>
+                      <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                    </div>
+                  </a>
+                  <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                    <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                    <div class="flex w-full h-full flex-col gap-2">
+                      <h1 class="text-primary text-lg">There is an error</h1>
+                      <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                    </div>
+                  </a>
+                  <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                    <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                    <div class="flex w-full h-full flex-col gap-2">
+                      <h1 class="text-primary text-lg">There is an error</h1>
+                      <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="w-full h-auto text-center bg-white py-4 rounded-lg">
+                  <a href="#">
+                    View all
+                    <i class="fas fa-magnifying-glass text-primary text-md"></i>
+                  </a>
+                </div>
+              </ul>
+            </div>
+          </div>
+          
+          <label tabindex="0"  class="avatar items-center gap-1 dropdown flex dropdown-bottom dropdown-end cursor-pointer">
+            <div class="w-10 rounded-full active:scale-75 duration-300">
+              <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+            </div>
+            <span class="text-sm font-medium text-[#474747]">Hi, Zulhan maulana</span>
+              <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-white rounded-box w-52 mt-5">
+                <li><a> <i class="fas fa-user-circle"></i> Profile</a></li>
+                <li><a> <i class="fas fa-cog"></i> Pengaturan</a></li>
+                <li><a href="../pages/login.html"> <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+              </ul>
+            </label>
+
+        </div>
+        <!-- tool bar END -->
+      </div>
+      <!-- navbar END -->
+
+      <!-- header -->
+      <div class="w-full bg-primary h-72 pb-44 px-3 md:pr-7 md:pl-28 grid grid-cols-1 md:grid-cols-2 grid-rows-3 md:grid-rows-2">
+        <div class="text-sm breadcrumbs text-white col-span-1">
+          <ul>
+            <li><a class="text-neutral">Dashboard</a></li> 
+            <li><a class="text-neutral">Anggota grup</a></li> 
+            <li class="font-medium" id="breadcrumb"></li>
+          </ul>
+        </div>
+        <h1 class="text-white font-bold text-2xl md:text-3xl col-span-1 row-start-2" id="judul-header"></h1>
+      </div>
+      <!-- header END -->
+
+      <!-- table anggota grup & stats web -->
+      <div class="w-full md:pl-28 md:pr-7 px-3 -translate-y-20 md:-translate-y-44">
+        <form action="./data-view.html" class="w-1/2 bg-white drop-shadow-2lg rounded-xl flex flex-col mx-auto p-5 gap-3">
+          <div class="form-control w-full">
+            <label class="label">
+              <span class="label-text text-lg text-slate-500">Nama</span>
+            </label>
+            <input type="text" placeholder="Type here" class="input bg-white border border-slate-400 focus:outline-none text-black font-medium" value="Dafi nurrohman maulana" />
+          </div>
+          <div class="form-control w-full">
+            <label class="label">
+              <span class="label-text text-lg text-slate-500">Nomor WhatsApp</span>
+            </label>
+            <input type="text" placeholder="Type here" class="input bg-white border border-slate-400 focus:outline-none text-black font-medium" value="+62 xxx xxx xxx" />
+          </div>
+          <div class="form-control w-full">
+            <label class="label">
+              <span class="label-text text-lg text-slate-500">Alamat lengkap</span>
+            </label>
+            <textarea type="text" placeholder="Type here" class="input bg-white border border-slate-400 focus:outline-none text-black font-medium h-36">Babakan sindangjaya</textarea>
+          </div>
+          <div class="form-control w-full">
+            <label class="label">
+              <span class="label-text text-lg text-slate-500">Role</span>
+            </label>
+            <select class="select bg-white border border-slate-400 focus:outline-none">
+              <option disabled selected>Admin</option>
+              <option>Anggota</option>
+              <option>Admin</option>
+              <option>Admin Web</option>
+              <option>Super admin</option>
+            </select>
+          </div>
+          <div class="form-control w-full flex flex-row gap-3">
+            <a href="./data-view.html" class="btn bg-transparent border border-slate-300 hover:bg-slate-300 hover:border-slate-300 normal-case">Cancel</a>
+            <button type="submit" class="btn btn-primary"> <i class="fas fa-pen mr-1"></i> Edit</button>
+          </div>
+        </form>
+      </div>
+      <!-- table anggota grup END -->
+
+      <!-- footer -->
+      <footer class="footer items-center justify-center md:justify-between py-3 bg-transparent border-t border-[#DDDDDD] text-neutral-content px-3 md:pl-28 md:pr-12 mt-28">
+        <div class="items-center md:grid-flow-col md:place-self-center">
+          <img src="../public/img/logo-kodingkeun.png" alt="Kodingkeun" class="w-12 mx-auto my-5 md:my-0 md:mx-0">
+          <p>Copyright © 2023 - All right reserved</p>
+        </div> 
+        <div class="grid-flow-col gap-4 place-self-center md:justify-self-end text-2xl items-center">
+          <a>
+            <i class="fa-brands fa-youtube"></i>
+          </a> 
+          <a>
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a>
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </footer>
+      <!-- footer End -->
+    </div>
+    <!-- Content END -->
+  </div>
+
+<label for="menu-btn" id="menu-overlay" class="fixed top-0 left-0 bottom-0 right-0 bg-black opacity-40 invisible"></label>
+<script src="../dist/js/adindas.js"></script>
+</body>
+</html>

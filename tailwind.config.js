@@ -20,7 +20,8 @@ module.exports = {
         'base-200': '#7F8396',
         'base-250': '#616161',
         'primary-100': '#490B73',
-        'primary-50': '#5846E0'
+        'primary-200': '#400A62',
+        'primary-50': '#5846E0',
       },
       dropShadow: {
         '2lg': '5px 6px 16px rgba(0, 0, 0, 0.25)'
