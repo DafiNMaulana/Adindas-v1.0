@@ -7,6 +7,24 @@ const menuBtn = document.getElementById('menu-btn');
 const sidebar = document.getElementById('sidebar');
 const menuOverlay = document.getElementById('menu-overlay');
 
+window.onload = function() {
+  // Mendapatkan judul halaman
+  // Mendapatkan elemen title
+  var title = document.getElementsByTagName("title")[0];
+		
+  // Mendapatkan nilai dari elemen span dengan id "title"
+  var judulHalaman = document.getElementById("title").innerHTML;
+  
+  // Mengubah nilai dari elemen title
+  title.innerHTML = "Adindas | " + judulHalaman;
+  
+  // Mengubah nilai dari breadcrumb
+  let breadcrumb = document.getElementById("breadcrumb");
+  let judulHeader = document.getElementById("judul-header");
+  breadcrumb.innerHTML = judulHalaman;
+  judulHeader.innerHTML = judulHalaman;
+};
+
 menuBtn.addEventListener('change', () => {
   sidebar.classList.toggle('w-0');
   sidebar.classList.toggle('w-60')
