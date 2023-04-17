@@ -71,7 +71,7 @@
     <div class="flex-1 relative ">
 
       <!-- navbar -->
-      <div class="w-full h-16 bg-white drop-shadow-md flex justify-between items-center px-3 md:pl-28 md:pr-12 z-40">
+      <div class="w-full h-16 bg-white drop-shadow-md flex justify-between items-center px-3 md:pl-28 md:pr-12 relative z-40">
 
         <!-- search bar -->
         <form action="#" class="hidden md:flex w-80 py-10 gap-1 items-center">
@@ -102,9 +102,74 @@
           <div class="indicator relative">
             <input type="checkbox" id="notif" class="peer" hidden>
             <span class="indicator-item w-2 h-2 bg-primary rounded-full animate-pulse"></span> 
-            <label for="notif" class="active:scale-75 duration-150 group cursor-pointer"><i class="fas fa-bell text-xl text-neutral duration-300"></i></label>
+            <div class="dropdown dropdown-bottom dropdown-left">
+              <label tabindex="0" class="cursor-pointer"><i class="fas fa-bell text-xl text-neutral duration-300"></i></label>
+              <ul tabindex="0" class="dropdown-content menu md:w-[400px] w-[80vw] h-[500px] bg-white drop-shadow-2lg rounded-xl relative z-[99] mt-5 translate-x-48">
+                <div class="w-full h-auto flex justify-between px-4 py-3">
+                  <span class="text-gray-400 font-medium text-md">Notification</span>
+                  <a href="" class="text-primary font-bold text-md">Mark all as read</a>
+                </div>
+                <div class="flex-1 pt-2 overflow-y-scroll scrollbar-thin scrollbar-thumb-base-200 scrollbar-thumb-rounded-lg">
+                  <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                    <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                    <div class="flex w-full h-full flex-col gap-2">
+                      <h1 class="text-primary text-lg">There is an error</h1>
+                      <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                    </div>
+                  </a>
+                  <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                    <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                    <div class="flex w-full h-full flex-col gap-2">
+                      <h1 class="text-primary text-lg">There is an error</h1>
+                      <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                    </div>
+                  </a>
+                  <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                    <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                    <div class="flex w-full h-full flex-col gap-2">
+                      <h1 class="text-primary text-lg">There is an error</h1>
+                      <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                    </div>
+                  </a>
+                  <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                    <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                    <div class="flex w-full h-full flex-col gap-2">
+                      <h1 class="text-primary text-lg">There is an error</h1>
+                      <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                    </div>
+                  </a>
+                  <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                    <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                    <div class="flex w-full h-full flex-col gap-2">
+                      <h1 class="text-primary text-lg">There is an error</h1>
+                      <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                    </div>
+                  </a>
+                  <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                    <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                    <div class="flex w-full h-full flex-col gap-2">
+                      <h1 class="text-primary text-lg">There is an error</h1>
+                      <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                    </div>
+                  </a>
+                  <a href="#" class="w-full h-auto p-3 border-b flex gap-2 hover:bg-gray-200">
+                    <span class="rounded-full py-3 px-4 bg-error"><i class="fas fa-warning text-xl text-white"></i></span>
+                    <div class="flex w-full h-full flex-col gap-2">
+                      <h1 class="text-primary text-lg">There is an error</h1>
+                      <span class="span text-gray-400 text-xs uppercase">about 3 minute ago</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="w-full h-auto text-center bg-white py-4 rounded-lg">
+                  <a href="#">
+                    View all
+                    <i class="fas fa-magnifying-glass text-primary text-md"></i>
+                  </a>
+                </div>
+              </ul>
+            </div>
+            <!-- <label for="notif" class="active:scale-75 duration-150 group cursor-pointer"><i class="fas fa-bell text-xl text-neutral duration-300"></i></label>
 
-            <!-- the content -->
             <div class="w-[400px] h-[500px] bg-white drop-shadow-2lg rounded-xl absolute top-12 right-0 flex flex-col invisible peer-checked:visible peer-checked:opacity-100 duration-150 opacity-">
               <div class="w-full h-auto flex justify-between px-4 py-3">
                 <span class="text-gray-400 font-medium text-md">Notification</span>
@@ -167,8 +232,7 @@
                   <i class="fas fa-magnifying-glass text-primary text-md"></i>
                 </a>
               </div>
-            </div>
-            <!-- the content -->
+            </div> -->
           </div>
           
           <label tabindex="0"  class="avatar items-center gap-1 dropdown flex dropdown-bottom dropdown-end cursor-pointer">
