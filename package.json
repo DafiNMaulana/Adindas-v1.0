@@ -7,8 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx tailwindcss -i ./dist/css/tailwind.css -o ./dist/css/adindas.css --watch",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build"
+    "install": "npm install",
+    "predeploy":"npm run install",
+    "deploy":"gh-pages -d install"
   },
   "keywords": [],
   "author": "",
