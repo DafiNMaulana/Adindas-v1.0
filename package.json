@@ -1,15 +1,11 @@
 {
-  "homepage": "https://dafinmaulana.github.io/Adindas-v1.0/",
   "name": "adindas-v1.0",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx tailwindcss -i ./dist/css/tailwind.css -o ./dist/css/adindas.css --watch",
-    "install": "npm install",
-    "predeploy":"npm run install",
-    "deploy":"gh-pages -d install"
+    "dev": "npx tailwindcss -i ./dist/css/tailwind.css -o ./dist/css/adindas.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +13,6 @@
   "devDependencies": {
     "chart.js": "^4.2.1",
     "daisyui": "^2.51.5",
-    "gh-pages": "^5.0.0",
     "tailwind-scrollbar": "^3.0.0",
     "tailwind-scrollbar-hide": "^1.1.7",
     "tailwindcss": "^3.3.1"
